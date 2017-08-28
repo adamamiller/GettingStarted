@@ -385,12 +385,12 @@ You can give GitHub your public SSH key instead. See the instructions [above](#c
 ----------------------------------------------------------------------
 #### <a name="issuing"></a>What is a GitHub "issue"?
 
-# To watch the video, [click here](https://www.youtube.com/watch?v=2g9lsbJBPEs&t=4m44s).
+**To watch the video, [click here](https://www.youtube.com/watch?v=2g9lsbJBPEs&t=4m44s).**
 
 When coding, many issues arise that need to be addressed: bugs, new features that you want, questions you have about the documentation and so on. When you have identified an issue, you usually want to do two things: 1) make a note of it so you can deal with it later and 2) tell your collaborators about it. GitHub issues do both.
 
 To start a new issue, go to the circle with an exclamation point inside it in the repo's right hand sidebar (right under "code" and above "Pull requests").  Then, hit the big green "New issue" button, give it a title (like the subject line of an email, summarizing the issue) and if necessary, a short description of what what needs to be done - and when you hit submit, the issue is added to the repo's list, and a notification email is sent to everyone who is "watching" the repo.
-# This is a Good Thing:
+**This is a Good Thing:**
 you want to be able to keep up with your projects!
 
 You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence follow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
