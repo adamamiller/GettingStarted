@@ -130,7 +130,7 @@ Ah, sorry. Imagine you are working on a document, and you want to save your old 
     </tr>
   </tbody>
 </table>
-and so on. The magic command that saves you manually combining two files is "git pull phil master". What must have happened here is that your colleague Phil has obtained a copy (a "clone") of the "repository" that you made with "git init". (Before it was just a folder: git init turns it into a repository, with a hidden directory called .git that contains all your old versions - or rather, the differences between old versions - that git can use to reconstruct your past work). Then, Phil has put it on his webserver, so that you can access it remotely. The "git remote add" command links the two repositories (yours and Phil's) together, so that you can each pull in the edits that the other makes. ("master" is the name of the "branch" of the repository that Phil was working in - we'll come back to branches in a second.)
+and so on. The magic command that saves you manually combining two files is "git pull phil master". What must have happened here is that your colleague Phil has obtained a copy (a "clone") of the "repository" that you made with "git init". (Before it was just a folder: git init turns it into a repository, with a hidden directory called .git that contains all your old versions - or rather, the differences between old versions - that git can use to reconstruct your past work). Then, Phil has put it on his web server, so that you can access it remotely. The "git remote add" command links the two repositories (yours and Phil's) together, so that you can each pull in the edits that the other makes. ("master" is the name of the "branch" of the repository that Phil was working in - we'll come back to branches in a second.)
 
 With git (and other versioning systems), the act of archiving your old version is called "committing your changes." It's good to do this often, so that you have more options as to which version to go back to if you need to (because you don't have to worry about out of control file proliferation anymore, right?). When you do a git commit you get to make a comment at the same time, to summarize in a few words what you did in this editing round. These comments are summarized for you when you do a "git log". The output of this command looks something like this:
 
@@ -283,7 +283,7 @@ You are here because `git` and GitHub are incredibly useful research tools, that
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="contributing"></a>How do I contribute to a projekt on GitHub?
+#### <a name="contributing"></a>How do I contribute to a project on GitHub?
 
 If you have been given write access to a GitHub repository, you can "clone" it to your local machine and start work. If you have not, you can still contribute by making a "fork" (there's a button for this in the top right-hand corner of the GitHub page for each repository). This will make a copy of the repository in your GitHub account, that is linked to the "base repo" - you can then clone from your fork to get the project onto your local machine.
 
@@ -367,7 +367,7 @@ You can make repos on <a href="https://github.com/">your own GitHub home page</a
 To turn one of your existing folders into a git repository, just do "git init" and then start git add'ing files. If you later want to push this to GitHub, you'll still need to start a repo on the GitHub site - just don't initialize it with a README or anything, just start it and then pick up its address (the thing that ends with ".git"). Then, on the command line, add a link to this new remote repository with "git remote add origin &lt;address&gt;". Then you can push to it as normal. More instructions <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a>.
 
 
-It's best to initialize a repo with a README (so you can tell people what the project is about) and a license file (so everyone is clear about what you are happy for people to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes so that they don't clutter up your git status messages. Once the repo has been started, you can then clone it to your local machine.
+It's best to initialize a repo with a README (so you can tell people what the project is about) and a license file (so everyone is clear about what you are happy for people to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and file types so that they don't clutter up your git status messages. Once the repo has been started, you can then clone it to your local machine.
 
 In the repo's settings, at the bottom of the right-hand sidebar, you can add collaborators (giving them read, write or admin access), and turn on the wiki associated with the repo, if you want.
 
