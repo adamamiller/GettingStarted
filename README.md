@@ -275,7 +275,7 @@ As you might have guessed, git pull is actually a shortcut to two commands one a
 
 Your name should be written on your "profile" page, which you can reach by going to the [GitHub home
 page](https://github.com/) and clicking on the little icon in the very top right hand corner of the page. It's a
-good idea to enter your full name (and preferably some other public details about yourself) so that peeple can
+good idea to enter your full name (and preferably some other public details about yourself) so that people can
 find you and communicate with you on GitHub.
 
 You are here because `git` and GitHub are incredibly useful research tools, that are well worth your time learning.
