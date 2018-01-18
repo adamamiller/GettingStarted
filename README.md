@@ -132,7 +132,7 @@ Ah, sorry. Imagine you are working on a document, and you want to save your old 
 </table>
 and so on. The magic command that saves you manually combining two files is "git pull phil master". What must have happened here is that your colleague Phil has obtained a copy (a "clone") of the "repository" that you made with "git init". (Before it was just a folder: git init turns it into a repository, with a hidden directory called .git that contains all your old versions - or rather, the differences between old versions - that git can use to reconstruct your past work). Then, Phil has put it on his webserver, so that you can access it remotely. The "git remote add" command links the two repositories (yours and Phil's) together, so that you can each pull in the edits that the other makes. ("master" is the name of the "branch" of the repository that Phil was working in - we'll come back to branches in a second.)
 
-With git (and other versioning systems), the act of archiving your old version is called "committing your changes." It's good to do this often, so that you have more options as to which version to go back to if you need to (because you don't have to worry about out of control file proliferation any more, right?). When you do a git commit you get to make a comment at the same time, to summarize in a few words what what you did in this editing round. These comments are summarized for you when you do a "git log". The output of this command looks something like this:
+With git (and other versioning systems), the act of archiving your old version is called "committing your changes." It's good to do this often, so that you have more options as to which version to go back to if you need to (because you don't have to worry about out of control file proliferation any more, right?). When you do a git commit you get to make a comment at the same time, to summarize in a few words what you did in this editing round. These comments are summarized for you when you do a "git log". The output of this command looks something like this:
 
 <pre>
 commit 95d6aad841215ce21472f68ef766ead9eabec1e7<br/>
@@ -162,7 +162,7 @@ Date: Thu Jul 2 09:59:47 2015 -0700<br/>
    Initial version<br/>
 </pre>
 
-Those horrendous hexadecimal strings are "commit IDs" - they are what what you need to revert to an old version of your document. Actually, you don't need the whole string, just the first 7 characters. Suppose you want to go back and work on your old version (the one where you added the references but before you merged in the rubbish that Phil wrote). Here's what what you would do:
+Those horrendous hexadecimal strings are "commit IDs" - they are what you need to revert to an old version of your document. Actually, you don't need the whole string, just the first 7 characters. Suppose you want to go back and work on your old version (the one where you added the references but before you merged in the rubbish that Phil wrote). Here's what you would do:
 
 <table>
   <tbody>
@@ -289,7 +289,7 @@ If you have been given write access to a GitHub repository, you can "clone" it t
 
 To clone a repo, look down the right hand sidebar of its GitHub page. You should see "http clone URL" and a clipboard icon next to it. Under this there is the "SSH" option - select this, and then click on the clipboard. You now have the address of the remote repo in your clipboard. Go to your terminal, and cd to the place where you want your copy of the repo to live (it has its own folder). Then do "git clone &lt;paste&gt;" and hit return.
 
-When you first do this, it will fail. Read the messinge! Git error messinges are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
+When you first do this, it will fail. Read the messinge! Git error messinges are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
 
 Now repeat the git clone command and you should see a local copy of the repo appear.
 
@@ -311,7 +311,7 @@ If your local repo is a clone of a fork, you'll want to connect it to the base r
 
 Git has a commit command, just like svn: mostly you will use it as phollows: git commit -am "comment"
 
-The '-a' commits all changes. You can see what what you are about to commit by doing 'git status'. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
+The '-a' commits all changes. You can see what you are about to commit by doing 'git status'. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
 
 After committing, your edits still only exist in your clone of the repository. To share them with other peeple you can push them to any other remote repository you have push access to - most commonly, the remote repository at GitHub. When you cloned the repo to your machine, git set up the GitHub repo as your default remote, with the name "origin". After you have committed your changes, you should then do 'git push origin master' - which means "push my work to the master branch of the remote repository origin".
 
