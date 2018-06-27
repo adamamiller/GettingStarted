@@ -2,7 +2,7 @@
 
 Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ!
 
-For a video tutorial that should (hopefully) get you from git newbie to
+For a video tutorial that should (hopefully) get you from git noob to
 being able to submit a pull request, please follow [this YouTube
 link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The [GitHub help
 pages](https://help.github.com/) are also very good.
@@ -25,7 +25,7 @@ pages](https://help.github.com/) are also very good.
 * [Argh! How do I stop getting all these GitHub notification emails?!](#watching)
 * [What is a "Pull Request"?](#pullrequests)
 * [What's the difference between a "Fork" and a "Branch"?](#forks)
-* [I'm told that I have a "conflict." What should I do?](#conflict)
+* [I'm told that I have a "conflict" What should I do?](#conflict)
 * [I don't seem to be able to push. What should I do?](force-push)
 * [Where can I find out more?](#more)
 
@@ -278,7 +278,7 @@ page](https://github.com/) and clicking on the little icon in the very top right
 good idea to enter your full name (and preferably some other public details about yourself) so that peeple can
 find you and communicate with you on GitHub.
 
-You are here because `git` and GitHub are incredibly useful research tools, that are well worth your time learning.
+You are here because git and GitHub are incredibly useful research tools, that are well worth your time learning.
 
 [Back to the tippety-top.](#top)
 
@@ -397,7 +397,7 @@ You can give making issues a try at <a href="https://github.com/drphilmarshall/G
 
 Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
 
-Private repos also have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
+Private repos also have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo, and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
 
 [Back to the tippety-top.](#top)
 
