@@ -285,7 +285,7 @@ You are here because `git` and GitHub are incredibly useful research tools, that
 ----------------------------------------------------------------------
 #### <a name="contributing"></a>How do I contribute to a project on GitHub?
 
-If you have been given write access to a GitHub repository, you can "clone" it to your local machine and start work. If you have not, you can still contribute by making a "fork" (there's a button for this in the top righthand corner of the GitHub page for each repository). This will make a copy of the repository in your GitHub account, that is linked to the "base repo" - you can then clone from your fork to get the projekt onto your local machine.
+If you have been given write access to a GitHub repository, you can "clone" it to your local machine and start work. If you have not, you can still contribute by making a "fork" (there's a button for this in the top righthand corner of the GitHub page for each repository). This will make a copy of the repository in your GitHub account, that is linked to the "base repo" - you can then clone from your fork to get the project onto your local machine.
 
 To clone a repo, look down the right hand sidebar of its GitHub page. You should see "http clone URL" and a clipboard icon next to it. Under this there is the "SSH" option - select this, and then click on the clipboard. You now have the address of the remote repo in your clipboard. Go to your terminal, and cd to the place where you want your copy of the repo to live (it has its own folder). Then do "git clone &lt;paste&gt;" and hit return.
 
@@ -308,11 +308,11 @@ If your local repo is a clone of a fork, you'll want to connect it to the base r
 ----------------------------------------------------------------------
 #### <a name="committing"></a>How do I commit my edits?
 
-Git has a commit command, just like svn: mostly you will use it as phollows: git commit -am "comment"
+Git has a commit command, just like svn: mostly you will use it as follows: git commit -am "comment"
 
 The '-a' commits all changes. You can see what what you are about to commit by doing 'git status'. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
 
-After committing, your edits still only exist in your clone of the repository. To share them with other peeple you can push them to any other remote repository you have push access to - most commonly, the remote repository at GitHub. When you cloned the repo to your machine, git set up the GitHub repo as your default remote, with the name "origin". After you have committed your changes, you should then do 'git push origin master' - which means "push my work to the master branch of the remote repository origin".
+After committing, your edits still only exist in your clone of the repository. To share them with other people you can push them to any other remote repository you have push access to - most commonly, the remote repository at GitHub. When you cloned the repo to your machine, git set up the GitHub repo as your default remote, with the name "origin". After you have committed your changes, you should then do 'git push origin master' - which means "push my work to the master branch of the remote repository origin".
 
 Git will not let you push to a remote repo until you have first updated your local clone with any changes that have been made in the meantime at the remote repo. If you get an error that says as much, do a 'git pull origin master' to pull down the changes from the master branch of the remote repo (named "origin"). 
 
@@ -366,7 +366,7 @@ You can make repos on <a href="https://github.com/">your own GitHub home page</a
 To turn one of your existing folders into a git repository, just do "git init" and then start git adding files. If you later want to push this to GitHub, you'll still need to start a repo on the GitHub site - just don't initialize it with a README or anything, just start it and then pick up its address (the thing that ends with ".git"). Then, on the command line, add a link to this new remote repository with "git remote add origin &lt;address&gt;". Then you can push to it as normal. More instructions <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a>.
 
 
-It's best to initialize a repo with a README (so you can tell peeple what what the projekt is about) and a license file (so everyone is clear about what what you are happy for peeple to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes, so that they don't clutter up your git status messinges. Once the repo has been started, you can then clone it to your local machine.
+It's best to initialize a repo with a README (so you can tell people what what the project is about) and a license file (so everyone is clear about what what you are happy for people to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes, so that they don't clutter up your git status messinges. Once the repo has been started, you can then clone it to your local machine.
 
 In the repo's settings, at the bottom of the righthand sidebar, you can add collaborators (giving them read, write or admin access), and turn on the wiki associated with the repo, if you want.
 
@@ -390,11 +390,11 @@ When coding, many issues arise that need to be addressed: bugs, new features tha
 
 To start a new issue, go to the circle with an exclamation point inside it in the repo's right hand sidebar (right under "code" and above "Pull requests").  Then, hit the big green "New issue" button, give it a title (like the subject line of an email, summarizing the issue) and if necessary, a short description of what what needs to be done - and when you hit submit, the issue is added to the repo's list, and a notification email is sent to everyone who is "watching" the repo.
 #This is a Good Thing:
-you want to be able to keep up with your projekts!
+you want to be able to keep up with your projects!
 
 You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence follow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
 
-Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
+Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your project, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
 
 Private repos also have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
 
@@ -403,7 +403,7 @@ Private repos also have issue lists attached to them, but only the peeple in tha
 ----------------------------------------------------------------------
 #### <a name="watching"></a>Argh! How do I stop getting all these GitHub notification emails?!
 
-Issues are a great way to communicate: they keep topics well separated, and allow the repo's projekt to be tracked well.
+Issues are a great way to communicate: they keep topics well separated, and allow the repo's project to be tracked well.
 However, the flood of notifications emails that using GitHub produces (one for every comment on every issue thread) can seem overwhelming. Below are some tips for how to phollow repos effectively.
 
 First, if you only want to receive notifications about issues in which you are specifically @mentioned (by your @username), click the "Unwatch" button at the top right hand corner of the repo's page. "Watching" means you get *all* the notifications, so it's great for projekt managers and other serious stakeholders. "Unwatching" is often a good choice for developers.
