@@ -393,7 +393,7 @@ To start a new issue, go to the circle with an exclamation point inside it in th
 #This is a Good Thing:
 you want to be able to keep up with your projects!
 
-You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence follow (all) hts issues, click on the "Watch" button in the top right hand corner of the repo's page.
+You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence follow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
 
 Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your project, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
 
