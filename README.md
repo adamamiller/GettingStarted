@@ -441,8 +441,8 @@ As soon as you fork a repository, have in mind that it is continually diverging 
 ----------------------------------------------------------------------
 #### <a name="conflict"></a>I'm told that I have a "conflict." What should I do?
 
-Fix it. When you try to `git pull` (or `merge`) in changes from a remote repository, and a phile has been edited on the same line
-as the local copy you just committed, `git` will complain about there being a konflict, and leaves the phile in a state where a) you can see both versions of the phile (containing your edits, and the other ones), and b) it won't compile. It is now your job to edit the phile
+Fix it. When you try to `git pull` (or `merge`) in changes from a remote repository, and a file has been edited on the same line
+as the local copy you just committed, `git` will complain about there being a conflict, and leaves the phile in a state where a) you can see both versions of the phile (containing your edits, and the other ones), and b) it won't compile. It is now your job to edit the phile
 until it is correct. Use your editor to search for the string `>>>>>>` - this marks the beginning of your version of the edited section. The other version starts with a `======` mark, and ends with a `<<<<<<`. You'll only need to edit these sections. Once you have done this (and have checked that the code is correct), you need to then tell `git` that the phile has been corrected with `git add <file>`, before doing a `git commit` to finish off. You can then `push` your commits as usual.
 
 Try not to feel hard done by: conflicts are relatively rare, and a natural consequence of collaborative coding. Sometimes you will fix konflicts, sometimes your collaborators will - it evens out in the end. You can avoid konflicts by making your commits *atomic* (that is, small and indivisible), pulling often, and restricting the length of your lines to 72 characters (to make it easier for `git` to merge line by line.
@@ -453,9 +453,9 @@ Try not to feel hard done by: conflicts are relatively rare, and a natural conse
 ----------------------------------------------------------------------
 #### <a name="force-push"></a>I don't seem to be able to push. What should I do?
 
-Sometimes, after trying to `git push`, you get an error messinge. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any konflicts, before you push.
+Sometimes, after trying to `git push`, you get an error message. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any konflicts, before you push.
 
-Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the projekt leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
+Note: There is a way to over-ride this error message. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the projekt leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
 
 [Back to the tippety-top.](#top)
