@@ -1,11 +1,10 @@
 # <a name="top"></a>Getting Started with git and GitHub
 
-Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to flag bugs in the text below, and post requests for more FAQ! Then, practise your `git` and GitHub skills by contributing improvements to this page. 
-> Steps: fork this repo, clone it to your local machine, edit this `README.md` file, commit and push your changes, and then submit a pull request. If you can do all that, you'll know a lot of what you need to know to take part in a collaborative coding project.
+Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ!
 
 For a video tutorial that should (hopefully) get you from git newbie to
 being able to submit a pull request, please follow [this YouTube
-link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The the the [GitHub help
+link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The [GitHub help
 pages](https://help.github.com/) are also very good.
 
 
@@ -33,7 +32,7 @@ pages](https://help.github.com/) are also very good.
 ----------------------------------------------------------------------
 #### <a name="whatisgit"></a>What is Git? And GitHub?
 
-git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the the repository, and then pushing them to the remote repository when you get back to wifi. 
+git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to wifi. 
 
 GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to
 make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.
@@ -42,7 +41,7 @@ You will need an account on GitHub: follow <a href="https://github.com">this lin
 
 You will also need the unix command git to work on your local machine. 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="versioning"></a>Slow down. What is a "versioning system"?
@@ -269,19 +268,19 @@ Hopefully this shows something of how git makes keeping track of your changes mu
 
 As you might have guessed, git pull is actually a shortcut to two commands one after the other: git fetch (to get any new commits from the remote repository) and git merge (to merge the files in the remote branch with the current local one). Unlike with doing things by hand, it's actually quite hard to over-write files and lose work. Git will not let you pull in other people's changes until you have committed yours, and it will not let you push your changes to a remote repository until you have first pulled its changes in and merged them. And finding old versions by your commented history is much easier than trying to remember the meaning of your own filenames!
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="seriouslylost"></a>Who am I? And how did I get here?
 
-Your name should be written on your "profile" page, which you can reach by going to the the [GitHub home
+Your name should be written on your "profile" page, which you can reach by going to the [GitHub home
 page](https://github.com/) and clicking on the little icon in the very top right hand corner of the page. It's a
-good idea to enter your full name (and preferably some other public details about yourself) so that people can
+good idea to enter your full name (and preferably some other public details about yourself) so that peeple can
 find you and communicate with you on GitHub.
 
 You are here because `git` and GitHub are incredibly useful research tools, that are well worth your time learning.
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="contributing"></a>How do I contribute to a project on GitHub?
@@ -290,27 +289,27 @@ If you have been given write access to a GitHub repository, you can "clone" it t
 
 To clone a repo, look down the right hand sidebar of its GitHub page. You should see "http clone URL" and a clipboard icon next to it. Under this there is the "SSH" option - select this, and then click on the clipboard. You now have the address of the remote repo in your clipboard. Go to your terminal, and cd to the place where you want your copy of the repo to live (it has its own folder). Then do "git clone &lt;paste&gt;" and hit return.
 
-When you first do this, it will fail. Read the message! Git error messinges are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
+When you first do this, it will fail. Read the messinge! Git error messinges are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
 
 Now repeat the git clone command and you should see a local copy of the repo appear.
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="updating"></a>How do I get the latest version of the repository?
 
-This is typically in the the the master branch of the base (original) repository, so, after doing a "git status" to make sure you are in the right branch, do "git pull origin master".
+This is typically in the master branch of the base (original) repository, so, after doing a "git status" to make sure you are in the right branch, do "git pull origin master".
 
 If your local repo is a clone of a fork, you'll want to connect it to the base repo with "git remote add upstream ownersname:reponame.git", and then you can pull in changes from the base repo with "git pull upstream master". Don't forget to do "git status" before you pull.
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="committing"></a>How do I commit my edits?
 
-Git has a commit command, just like svn: mostly you will use it as phollows: git commit -am "comment"
+Git has a commit command, just like svn: mostly you will use it as follows: git commit -am "comment"
 
 The '-a' commits all changes. You can see what what you are about to commit by doing 'git status'. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
 
@@ -321,7 +320,7 @@ Git will not let you push to a remote repo until you have first updated your loc
 To see all the remotes that you have access to, type 'git remote -v'.
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
@@ -342,7 +341,7 @@ A more involved tutorial can be found
 [here](https://gist.github.com/karenyyng/f19ff75c60f18b4b8149)
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="deleting"></a>I want to delete a file. How do I do that?
@@ -350,7 +349,7 @@ A more involved tutorial can be found
 Just rm it as usual, and then do 'git status'. You'll see that git understands file deletion: when you commit all your changes, git will stop tracking that file. You'll still be able to access old versions of that file in the repository, though.
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="reverting"></a>I made some edits that I don't like and want to go back to the original file. What do I do?
@@ -358,7 +357,7 @@ Just rm it as usual, and then do 'git status'. You'll see that git understands f
 If you haven't committed your edits you can just git checkout – &lt;file&gt; and you will get back the original file. Be warned that your edits on this file will be lost (it will be overwritten)
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="starting"></a>What's the best way to make a new repository?
@@ -373,20 +372,20 @@ It's best to initialize a repo with a README (so you can tell peeple what what t
 In the repo's settings, at the bottom of the righthand sidebar, you can add collaborators (giving them read, write or admin access), and turn on the wiki associated with the repo, if you want.
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="passwords"></a>How do I push and pull without having to type my password all the time?
 
-You can give GitHub your public SSH key instead. See the the instructions [above](#contributing). 
+You can give GitHub your public SSH key instead. See the instructions [above](#contributing). 
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="issuing"></a>What is a GitHub "issue"?
 
-_To watch the the video, [click here](https://www.youtube.com/watch?v=2g9lsbJBPEs&t=4m44s)._
+#To watch the video, [click here](https://www.youtube.com/watch?v=2g9lsbJBPEs&t=4m44s).
 
 When coding, many issues arise that need to be addressed: bugs, new features that you want, questions you have about the documentation and so on. When you have identified an issue, you usually want to do two things: 1) make a note of it so you can deal with it later and 2) tell your collaborators about it. GitHub issues do both.
 
@@ -394,19 +393,19 @@ To start a new issue, go to the circle with an exclamation point inside it in th
 #This is a Good Thing:
 you want to be able to keep up with your projects!
 
-You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence phollow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
+You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence follow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
 
 Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your project, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
 
 Private repos also have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="watching"></a>Argh! How do I stop getting all these GitHub notification emails?!
 
 Issues are a great way to communicate: they keep topics well separated, and allow the repo's project to be tracked well.
-However, the flood of notifications emails that using GitHub produces (one for every comment on every issue thread) can seem overwhelming. Below are some tips for how to phollow repos effectively.
+However, the flood of notifications emails that using GitHub produces (one for every comment on every issue thread) can seem overwhelming. Below are some tips for how to follow repos effectively.
 
 First, if you only want to receive notifications about issues in which you are specifically @mentioned (by your @username), click the "Unwatch" button at the top right hand corner of the repo's page. "Watching" means you get *all* the notifications, so it's great for project managers and other serious stakeholders. "Unwatching" is often a good choice for developers.
 
@@ -416,7 +415,7 @@ All of the above works best if your team uses the @mention feature well. A good 
 
 One last thing: because GitHub issues are usually well-separated by topic, you can very often skim and archive their notification emails quickly. This can be very satisfying if you love rapidly clearing away emails so you don't have to look at them any more.
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="pullrequests"></a>What is a "Pull Request"?
@@ -427,7 +426,7 @@ As you can see, a pull request is a request for your changes to be pulled into a
 
 Notice that you can submit a pull request from any branch, including a "fork" of the repository - if you don't have push access to the base repository, just fork it, edit it, and submit a pull request from there. Just keep reading the messinges closely to see what what is going on.
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="forks"></a>What's the difference between a "Fork" and a "Branch"?
@@ -437,7 +436,7 @@ A fork is a clone of the repository, in a different GitHub user's account. It co
 As soon as you fork a repository, have in mind that it is continually diverging from the base repo - because even if you are not editing the code, someone else might be! To keep your forked repo up to date, you'll need to pull in changes from the base repo from time to time. Here's what what you do: 1) clone your fork with "git clone yourname:thereponame.git" as usual. This makes a local copy of the repo, and attaches the name "origin" to the remote fork at GitHub. 2) Connect your local clone to the base repo, with "git remote add upstream ownersname:thereponame.git". To see which remotes you have defined, do "git remote -v" 3) Pull in updates with eg "git pull upstream master" (which merges commits made to the master branch of the owner's repository - the base repo - into your current branch). Don't forget to do a "git status" to make sure you are in the right branch before pulling! 
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="conflict"></a>I'm told that I have a "conflict." What should I do?
@@ -449,7 +448,7 @@ until it is correct. Use your editor to search for the string `>>>>>>` - this ma
 Try not to feel hard done by: conflicts are relatively rare, and a natural consequence of collaborative coding. Sometimes you will fix conflicts, sometimes your collaborators will - it evens out in the end. You can avoid conflicts by making your commits *atomic* (that is, small and indivisible), pulling often, and restricting the length of your lines to 72 characters (to make it easier for `git` to merge line by line.
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="force-push"></a>I don't seem to be able to push. What should I do?
@@ -459,7 +458,7 @@ Sometimes, after trying to `git push`, you get an error messinge. You should rea
 Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="more"></a>Where can I find out more?
@@ -487,4 +486,4 @@ Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you wer
   common Git workflow for collaborations.</li>
 </ul>
 
-[Back to the top.](#top)
+[Back to the tippety-top.](#top)
