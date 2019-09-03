@@ -323,9 +323,9 @@ To see all the remotes that you have access to, type 'git remote -v'.
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="conflicts"></a>I git pulled and now I have a konflict. What do I do?
+#### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
-Fix it. The error messinge tells you which files contain the konflict.
+Fix it. The error messinge tells you which files contain the conflict.
 Open them in an editor and search for the string
 '&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code
 between this string and the '======' mark is the remote version, while
@@ -335,7 +335,7 @@ konflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git 
 You will also want to push your change to the remote branch on, for example, a hosting service
 like GitHub.
 
-If you find yourself fixing complicated konflicts often,
+If you find yourself fixing complicated conflicts often,
 you may want to learn how to use a `mergetool` to compare the differences.
 A more involved tutorial can be found
 [here](https://gist.github.com/karenyyng/f19ff75c60f18b4b8149)
