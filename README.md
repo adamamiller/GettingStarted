@@ -35,7 +35,7 @@ pages](https://help.github.com/) are also very good.
 git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to wifi. 
 
 GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to
-make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.
+make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/LSSTDESC">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.
 
 You will need an account on GitHub: follow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.
 
@@ -362,7 +362,7 @@ If you haven't committed your edits you can just git checkout – &lt;file&gt; 
 ----------------------------------------------------------------------
 #### <a name="starting"></a>What's the best way to make a new repository?
 
-You can make repos on <a href="https://github.com/">your own GitHub home page</a>, with the big green "New repository" button. If you are in a GitHub organization, you need to be given admin access to be able to create repos there. Here's the [LSST DESC GitHub organization](https://github.com/DarkEnergyScienceCollaboration) if you want to see what what an organization looks like.
+You can make repos on <a href="https://github.com/">your own GitHub home page</a>, with the big green "New repository" button. If you are in a GitHub organization, you need to be given admin access to be able to create repos there. Here's the [LSST DESC GitHub organization](https://github.com/LSSTDESC) if you want to see what what an organization looks like.
 
 To turn one of your existing folders into a git repository, just do "git init" and then start git add'ing files. If you later want to push this to GitHub, you'll still need to start a repo on the GitHub site - just don't initialize it with a README or anything, just start it and then pick up its address (the thing that ends with ".git"). Then, on the command line, add a link to this new remote repository with "git remote add origin &lt;address&gt;". Then you can push to it as normal. More instructions <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a>.
 
