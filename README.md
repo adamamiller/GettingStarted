@@ -441,9 +441,9 @@ As soon as you fork a repository, have in mind that it is continually diverging 
 ----------------------------------------------------------------------
 #### <a name="conflict"></a>I'm told that I have a "conflict." What should I do?
 
-Fix it. When you try to `git pull` (or `merge`) in changes from a remote repository, and a phile has been edited on the same line
-as the local copy you just committed, `git` will complain about there being a conflict, and leaves the phile in a state where a) you can see both versions of the phile (containing your edits, and the other ones), and b) it won't compile. It is now your job to edit the phile
-until it is correct. Use your editor to search for the string `>>>>>>` - this marks the beginning of your version of the edited section. The other version starts with a `======` mark, and ends with a `<<<<<<`. You'll only need to edit these sections. Once you have done this (and have checked that the code is correct), you need to then tell `git` that the phile has been corrected with `git add <file>`, before doing a `git commit` to finish off. You can then `push` your commits as usual.
+Fix it. When you try to `git pull` (or `merge`) in changes from a remote repository, and a file has been edited on the same line
+as the local copy you just committed, `git` will complain about there being a conflict, and leaves the file in a state where a) you can see both versions of the file (containing your edits, and the other ones), and b) it won't compile. It is now your job to edit the file
+until it is correct. Use your editor to search for the string `>>>>>>` - this marks the beginning of your version of the edited section. The other version starts with a `======` mark, and ends with a `<<<<<<`. You'll only need to edit these sections. Once you have done this (and have checked that the code is correct), you need to then tell `git` that the file has been corrected with `git add <file>`, before doing a `git commit` to finish off. You can then `push` your commits as usual.
 
 Try not to feel hard done by: conflicts are relatively rare, and a natural consequence of collaborative coding. Sometimes you will fix conflicts, sometimes your collaborators will - it evens out in the end. You can avoid conflicts by making your commits *atomic* (that is, small and indivisible), pulling often, and restricting the length of your lines to 72 characters (to make it easier for `git` to merge line by line.
 
