@@ -264,7 +264,7 @@ Now, suppose you want to submit your version of the document to a journal. You t
   </tbody>
 </table>
 
-Hopefully this shows something of how git makes keeping track of your changes much simpler. You only ever edit one file, and you only have to do minimal manual editing to merge changes from multiple collaborators ("konflicts" between different versions of the same files do arise, but only when the same lines of the file have been edited, and so they are usually easy to fix - certainly much easier than merging two versions by hand in an editor). Branches take a bit of getting used to: a git checkout can make your current working directory look very different, unlike any other unix command you use! But thinking of it as being like "cd" is helpful. The "git status" command is incredibly useful: it tells you which files have been modified since the last commit, if there are any files that have not yet been added to the repository, if any files have been deleted since the last commit, all as well as which branch you are on.
+Hopefully this shows something of how git makes keeping track of your changes much simpler. You only ever edit one file, and you only have to do minimal manual editing to merge changes from multiple collaborators ("conflicts" between different versions of the same files do arise, but only when the same lines of the file have been edited, and so they are usually easy to fix - certainly much easier than merging two versions by hand in an editor). Branches take a bit of getting used to: a git checkout can make your current working directory look very different, unlike any other unix command you use! But thinking of it as being like "cd" is helpful. The "git status" command is incredibly useful: it tells you which files have been modified since the last commit, if there are any files that have not yet been added to the repository, if any files have been deleted since the last commit, all as well as which branch you are on.
 
 As you might have guessed, git pull is actually a shortcut to two commands one after the other: git fetch (to get any new commits from the remote repository) and git merge (to merge the files in the remote branch with the current local one). Unlike with doing things by hand, it's actually quite hard to over-write files and lose work. Git will not let you pull in other people's changes until you have committed yours, and it will not let you push your changes to a remote repository until you have first pulled its changes in and merged them. And finding old versions by your commented history is much easier than trying to remember the meaning of your own filenames!
 
@@ -323,19 +323,19 @@ To see all the remotes that you have access to, type 'git remote -v'.
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="conflicts"></a>I git pulled and now I have a konflict. What do I do?
+#### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
-Fix it. The error messinge tells you which files contain the konflict.
+Fix it. The error messinge tells you which files contain the conflict.
 Open them in an editor and search for the string
 '&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code
 between this string and the '======' mark is the remote version, while
 the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is
 your local version. Edit the file so it is correct. Then, to resolve the
-konflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git commit` to save your changes.
+conflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git commit` to save your changes.
 You will also want to push your change to the remote branch on, for example, a hosting service
 like GitHub.
 
-If you find yourself fixing complicated konflicts often,
+If you find yourself fixing complicated conflicts often,
 you may want to learn how to use a `mergetool` to compare the differences.
 A more involved tutorial can be found
 [here](https://gist.github.com/karenyyng/f19ff75c60f18b4b8149)
@@ -442,10 +442,10 @@ As soon as you fork a repository, have in mind that it is continually diverging 
 #### <a name="conflict"></a>I'm told that I have a "conflict." What should I do?
 
 Fix it. When you try to `git pull` (or `merge`) in changes from a remote repository, and a phile has been edited on the same line
-as the local copy you just committed, `git` will complain about there being a konflict, and leaves the phile in a state where a) you can see both versions of the phile (containing your edits, and the other ones), and b) it won't compile. It is now your job to edit the phile
+as the local copy you just committed, `git` will complain about there being a conflict, and leaves the phile in a state where a) you can see both versions of the phile (containing your edits, and the other ones), and b) it won't compile. It is now your job to edit the phile
 until it is correct. Use your editor to search for the string `>>>>>>` - this marks the beginning of your version of the edited section. The other version starts with a `======` mark, and ends with a `<<<<<<`. You'll only need to edit these sections. Once you have done this (and have checked that the code is correct), you need to then tell `git` that the phile has been corrected with `git add <file>`, before doing a `git commit` to finish off. You can then `push` your commits as usual.
 
-Try not to feel hard done by: conflicts are relatively rare, and a natural consequence of collaborative coding. Sometimes you will fix konflicts, sometimes your collaborators will - it evens out in the end. You can avoid konflicts by making your commits *atomic* (that is, small and indivisible), pulling often, and restricting the length of your lines to 72 characters (to make it easier for `git` to merge line by line.
+Try not to feel hard done by: conflicts are relatively rare, and a natural consequence of collaborative coding. Sometimes you will fix conflicts, sometimes your collaborators will - it evens out in the end. You can avoid conflicts by making your commits *atomic* (that is, small and indivisible), pulling often, and restricting the length of your lines to 72 characters (to make it easier for `git` to merge line by line.
 
 
 [Back to the tippety-top.](#top)
@@ -453,7 +453,7 @@ Try not to feel hard done by: conflicts are relatively rare, and a natural conse
 ----------------------------------------------------------------------
 #### <a name="force-push"></a>I don't seem to be able to push. What should I do?
 
-Sometimes, after trying to `git push`, you get an error messinge. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any konflicts, before you push.
+Sometimes, after trying to `git push`, you get an error messinge. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any conflicts, before you push.
 
 Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the projekt leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
