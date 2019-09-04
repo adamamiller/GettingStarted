@@ -202,7 +202,7 @@ Those horrendous hexadecimal strings are "commit IDs" - they are what what you n
   </tbody>
 </table>
 
-Instead of making a new folder (called, eg, "rewording") and working on a reworded version in it, with git you would make a new <em>branch</em> of the repository (called "rewording") and work on ms.tex there. The command for moving between branches (like changing directories) is "git checkout". The initial branch is called "master" - good practice is to use master for the current, best, working version, and all other branches for experimenting. 
+Instead of making a new folder (called, e.g., "rewording") and working on a reworded version in it, with git you would make a new <em>branch</em> of the repository (called "rewording") and work on ms.tex there. The command for moving between branches (like changing directories) is "git checkout". The initial branch is called "master" - good practice is to use master for the current, best, working version, and all other branches for experimenting. 
 
 Now, suppose you want to submit your version of the document to a journal. You talk to Phil, and persuade him that your text is better - not by emailing him your version, but by pushing your new branch to his repository (assuming he gave you permission). Then you can carry on editing in the master branch - which is like going back to your main directory:
 
@@ -275,7 +275,7 @@ As you might have guessed, git pull is actually a shortcut to two commands one a
 
 Your name should be written on your "profile" page, which you can reach by going to the [GitHub home
 page](https://github.com/) and clicking on the little icon in the very top right hand corner of the page. It's a
-good idea to enter your full name (and preferably some other public details about yourself) so that peeple can
+good idea to enter your full name (and preferably some other public details about yourself) so that people can
 find you and communicate with you on GitHub.
 
 You are here because `git` and GitHub are incredibly useful research tools, that are well worth your time learning.
@@ -283,13 +283,13 @@ You are here because `git` and GitHub are incredibly useful research tools, that
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="contributing"></a>How do I contribute to a projekt on GitHub?
+#### <a name="contributing"></a>How do I contribute to a project on GitHub?
 
 If you have been given write access to a GitHub repository, you can "clone" it to your local machine and start work. If you have not, you can still contribute by making a "fork" (there's a button for this in the top righthand corner of the GitHub page for each repository). This will make a copy of the repository in your GitHub account, that is linked to the "base repo" - you can then clone from your fork to get the projekt onto your local machine.
 
 To clone a repo, look down the right hand sidebar of its GitHub page. You should see "http clone URL" and a clipboard icon next to it. Under this there is the "SSH" option - select this, and then click on the clipboard. You now have the address of the remote repo in your clipboard. Go to your terminal, and cd to the place where you want your copy of the repo to live (it has its own folder). Then do "git clone &lt;paste&gt;" and hit return.
 
-When you first do this, it will fail. Read the messinge! Git error messinges are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
+When you first do this, it will fail. Read the message! Git error messages are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
 
 Now repeat the git clone command and you should see a local copy of the repo appear.
 
@@ -309,7 +309,7 @@ If your local repo is a clone of a fork, you'll want to connect it to the base r
 ----------------------------------------------------------------------
 #### <a name="committing"></a>How do I commit my edits?
 
-Git has a commit command, just like svn: mostly you will use it as phollows: git commit -am "comment"
+Git has a commit command, just like svn: mostly you will use it as follows: git commit -am "comment"
 
 The '-a' commits all changes. You can see what what you are about to commit by doing 'git status'. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
 
@@ -323,7 +323,7 @@ To see all the remotes that you have access to, type 'git remote -v'.
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="conflicts"></a>I git pulled and now I have a konflict. What do I do?
+#### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
 Fix it. The error messinge tells you which files contain the konflict.
 Open them in an editor and search for the string
