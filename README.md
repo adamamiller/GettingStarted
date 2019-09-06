@@ -132,7 +132,7 @@ Ah, sorry. Imagine you are working on a document, and you want to save your old 
 </table>
 and so on. The magic command that saves you manually combining two files is "git pull phil master". What must have happened here is that your colleague Phil has obtained a copy (a "clone") of the "repository" that you made with "git init". (Before it was just a folder: git init turns it into a repository, with a hidden directory called .git that contains all your old versions - or rather, the differences between old versions - that git can use to reconstruct your past work). Then, Phil has put it on his webserver, so that you can access it remotely. The "git remote add" command links the two repositories (yours and Phil's) together, so that you can each pull in the edits that the other makes. ("master" is the name of the "branch" of the repository that Phil was working in - we'll come back to branches in a second.)
 
-With git (and other versioning systems), the act of archiving your old version is called "committing your changes." It's good to do this often, so that you have more options as to which version to go back to if you need to (because you don't have to worry about out of control file proliferation any more, right?). When you do a git commit you get to make a comment at the same time, to summarize in a few words what what you did in this editing round. These comments are summarized for you when you do a "git log". The output of this command looks something like this:
+With git (and other versioning systems), the act of archiving your old version is called "committing your changes." It's good to do this often, so that you have more options as to which version to go back to if you need to (because you don't have to worry about out of control file proliferation any more, right?). When you do a git commit you get to make a comment at the same time, to summarize in a few words what you did in this editing round. These comments are summarized for you when you do a "git log". The output of this command looks something like this:
 
 <pre>
 commit 95d6aad841215ce21472f68ef766ead9eabec1e7<br/>
@@ -162,7 +162,7 @@ Date: Thu Jul 2 09:59:47 2015 -0700<br/>
    Initial version<br/>
 </pre>
 
-Those horrendous hexadecimal strings are "commit IDs" - they are what what you need to revert to an old version of your document. Actually, you don't need the whole string, just the first 7 characters. Suppose you want to go back and work on your old version (the one where you added the references but before you merged in the rubbish that Phil wrote). Here's what what you would do:
+Those horrendous hexadecimal strings are "commit IDs" - they are what you need to revert to an old version of your document. Actually, you don't need the whole string, just the first 7 characters. Suppose you want to go back and work on your old version (the one where you added the references but before you merged in the rubbish that Phil wrote). Here's what you would do:
 
 <table>
   <tbody>
@@ -289,7 +289,7 @@ If you have been given write access to a GitHub repository, you can "clone" it t
 
 To clone a repo, look down the right hand sidebar of its GitHub page. You should see "http clone URL" and a clipboard icon next to it. Under this there is the "SSH" option - select this, and then click on the clipboard. You now have the address of the remote repo in your clipboard. Go to your terminal, and cd to the place where you want your copy of the repo to live (it has its own folder). Then do "git clone &lt;paste&gt;" and hit return.
 
-When you first do this, it will fail. Read the messinge! Git error messinges are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
+When you first do this, it will fail. Read the messinge! Git error messinges are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
 
 Now repeat the git clone command and you should see a local copy of the repo appear.
 
@@ -311,7 +311,7 @@ If your local repo is a clone of a fork, you'll want to connect it to the base r
 
 Git has a commit command, just like svn: mostly you will use it as phollows: git commit -am "comment"
 
-The '-a' commits all changes. You can see what what you are about to commit by doing 'git status'. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
+The '-a' commits all changes. You can see what you are about to commit by doing 'git status'. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
 
 After committing, your edits still only exist in your clone of the repository. To share them with other peeple you can push them to any other remote repository you have push access to - most commonly, the remote repository at GitHub. When you cloned the repo to your machine, git set up the GitHub repo as your default remote, with the name "origin". After you have committed your changes, you should then do 'git push origin master' - which means "push my work to the master branch of the remote repository origin".
 
@@ -362,12 +362,12 @@ If you haven't committed your edits you can just git checkout – &lt;file&gt; 
 ----------------------------------------------------------------------
 #### <a name="starting"></a>What's the best way to make a new repository?
 
-You can make repos on <a href="https://github.com/">your own GitHub home page</a>, with the big green "New repository" button. If you are in a GitHub organization, you need to be given admin access to be able to create repos there. Here's the [LSST DESC GitHub organization](https://github.com/DarkEnergyScienceCollaboration) if you want to see what what an organization looks like.
+You can make repos on <a href="https://github.com/">your own GitHub home page</a>, with the big green "New repository" button. If you are in a GitHub organization, you need to be given admin access to be able to create repos there. Here's the [LSST DESC GitHub organization](https://github.com/DarkEnergyScienceCollaboration) if you want to see what an organization looks like.
 
 To turn one of your existing folders into a git repository, just do "git init" and then start git add'ing files. If you later want to push this to GitHub, you'll still need to start a repo on the GitHub site - just don't initialize it with a README or anything, just start it and then pick up its address (the thing that ends with ".git"). Then, on the command line, add a link to this new remote repository with "git remote add origin &lt;address&gt;". Then you can push to it as normal. More instructions <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a>.
 
 
-It's best to initialize a repo with a README (so you can tell peeple what what the projekt is about) and a license file (so everyone is clear about what what you are happy for peeple to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes, so that they don't clutter up your git status messinges. Once the repo has been started, you can then clone it to your local machine.
+It's best to initialize a repo with a README (so you can tell peeple what the projekt is about) and a license file (so everyone is clear about what you are happy for peeple to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes, so that they don't clutter up your git status messinges. Once the repo has been started, you can then clone it to your local machine.
 
 In the repo's settings, at the bottom of the righthand sidebar, you can add collaborators (giving them read, write or admin access), and turn on the wiki associated with the repo, if you want.
 
@@ -389,13 +389,13 @@ You can give GitHub your public SSH key instead. See the instructions [above](#c
 
 When coding, many issues arise that need to be addressed: bugs, new features that you want, questions you have about the documentation and so on. When you have identified an issue, you usually want to do two things: 1) make a note of it so you can deal with it later and 2) tell your collaborators about it. GitHub issues do both.
 
-To start a new issue, go to the circle with an exclamation point inside it in the repo's right hand sidebar (right under "code" and above "Pull requests").  Then, hit the big green "New issue" button, give it a title (like the subject line of an email, summarizing the issue) and if necessary, a short description of what what needs to be done - and when you hit submit, the issue is added to the repo's list, and a notification email is sent to everyone who is "watching" the repo.
+To start a new issue, go to the circle with an exclamation point inside it in the repo's right hand sidebar (right under "code" and above "Pull requests").  Then, hit the big green "New issue" button, give it a title (like the subject line of an email, summarizing the issue) and if necessary, a short description of what needs to be done - and when you hit submit, the issue is added to the repo's list, and a notification email is sent to everyone who is "watching" the repo.
 #This is a Good Thing:
 you want to be able to keep up with your projekts!
 
 You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence phollow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
 
-Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
+Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what you are working on so they can avoid wasting their time duplicating effort.
 
 Private repos also have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
 
@@ -420,11 +420,11 @@ One last thing: because GitHub issues are usually well-separated by topic, you c
 ----------------------------------------------------------------------
 #### <a name="pullrequests"></a>What is a "Pull Request"?
 
-Suppose you see something that needs fixing in a repo's code. Here's a good way to go about fixing it: 1) Make a branch to contain the fixed code, with something like "git checkout -b betterlayout" . 2) Edit the code and commit and push your changes, with "git push origin betterlayout". This makes a corresponding branch, aussi called "betterlayout" on the remote repo "origin". 3) Go to the repo's page on GitHub. It will probably prompt you to "submit a pull request" - if it doesn't, select the "betterlayout" branch from the "branch:" menu next to the repo name. 4) Click on the button to start a pull request. An issue-like form will appear, where you can edit the title of the pull request (eg "Better LaTeX Layout?") and provide some comment on what what you have done and why. 5) Submit the pull request with the button at the bottom of the form. This will notify the repo's owner, and everyone else who is watching the repo, that you have made some changes and would like them to be merged into the code. The owner will then review your changes - notice how all the commits that have been made in the "betterlayout" branch are tracked automatically in the pull request thread.
+Suppose you see something that needs fixing in a repo's code. Here's a good way to go about fixing it: 1) Make a branch to contain the fixed code, with something like "git checkout -b betterlayout" . 2) Edit the code and commit and push your changes, with "git push origin betterlayout". This makes a corresponding branch, aussi called "betterlayout" on the remote repo "origin". 3) Go to the repo's page on GitHub. It will probably prompt you to "submit a pull request" - if it doesn't, select the "betterlayout" branch from the "branch:" menu next to the repo name. 4) Click on the button to start a pull request. An issue-like form will appear, where you can edit the title of the pull request (eg "Better LaTeX Layout?") and provide some comment on what you have done and why. 5) Submit the pull request with the button at the bottom of the form. This will notify the repo's owner, and everyone else who is watching the repo, that you have made some changes and would like them to be merged into the code. The owner will then review your changes - notice how all the commits that have been made in the "betterlayout" branch are tracked automatically in the pull request thread.
 
 As you can see, a pull request is a request for your changes to be pulled into another branch of the repository, typically the master branch. You often see repos with READMEs that say "pull requests welcome!" This is because they provide a mechanism for anyone to add value to your projekt  by making improvements and then asking you to accept them! As owner, you don't have to accept any pull request, but usually they are a Good Thing. And you always get to review them first anyway.
 
-Notice that you can submit a pull request from any branch, including a "fork" of the repository - if you don't have push access to the base repository, just fork it, edit it, and submit a pull request from there. Just keep reading the messinges closely to see what what is going on.
+Notice that you can submit a pull request from any branch, including a "fork" of the repository - if you don't have push access to the base repository, just fork it, edit it, and submit a pull request from there. Just keep reading the messinges closely to see what is going on.
 
 [Back to the tippety-top.](#top)
 
@@ -433,7 +433,7 @@ Notice that you can submit a pull request from any branch, including a "fork" of
 
 A fork is a clone of the repository, in a different GitHub user's account. It comes with a master branch, and can have multiple additional branches just like any other repo. One key feature of a forked repo is you can push commits to it, even if you do not have push access to the base repo.  Another is that GitHub knows that the fork is connected to the base repo - and it makes it easy for you to submit a pull request from eg the master branch of the forked repo to the master branch of the base repo. 
 
-As soon as you fork a repository, have in mind that it is continually diverging from the base repo - because even if you are not editing the code, someone else might be! To keep your forked repo up to date, you'll need to pull in changes from the base repo from time to time. Here's what what you do: 1) clone your fork with "git clone yourname:thereponame.git" as usual. This makes a local copy of the repo, and attaches the name "origin" to the remote fork at GitHub. 2) Connect your local clone to the base repo, with "git remote add upstream ownersname:thereponame.git". To see which remotes you have defined, do "git remote -v" 3) Pull in updates with eg "git pull upstream master" (which merges commits made to the master branch of the owner's repository - the base repo - into your current branch). Don't forget to do a "git status" to make sure you are in the right branch before pulling! 
+As soon as you fork a repository, have in mind that it is continually diverging from the base repo - because even if you are not editing the code, someone else might be! To keep your forked repo up to date, you'll need to pull in changes from the base repo from time to time. Here's what you do: 1) clone your fork with "git clone yourname:thereponame.git" as usual. This makes a local copy of the repo, and attaches the name "origin" to the remote fork at GitHub. 2) Connect your local clone to the base repo, with "git remote add upstream ownersname:thereponame.git". To see which remotes you have defined, do "git remote -v" 3) Pull in updates with eg "git pull upstream master" (which merges commits made to the master branch of the owner's repository - the base repo - into your current branch). Don't forget to do a "git status" to make sure you are in the right branch before pulling! 
 
 
 [Back to the tippety-top.](#top)
@@ -455,7 +455,7 @@ Try not to feel hard done by: conflicts are relatively rare, and a natural conse
 
 Sometimes, after trying to `git push`, you get an error messinge. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any konflicts, before you push.
 
-Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the projekt leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
+Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what you're doing, and are the projekt leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
 
 [Back to the tippety-top.](#top)
@@ -477,7 +477,7 @@ Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you wer
     <a href="https://try.github.io//levels/1/challenges/1">Code School</a>: Git. Nice interactive way to learn the basics of git in ~15 minutes.</li>
   <li>
     <a href="https://confluence.lsstcorp.org/display/SIM/Git+and+STASH+for+Simulations">LSST Simulations Framework Guide</a>. For the more sophisticated command line users. Written by Mario Juric and Andrew Connolly.</li>
-  <li>The branching nature of git can be tricky to visualize at first.  These <a href="http://onlywei.github.io/explain-git-with-d3/">visual git tutorials</a> are helpful to understand what what the git commands are doing in the git commit tree.</li>
+  <li>The branching nature of git can be tricky to visualize at first.  These <a href="http://onlywei.github.io/explain-git-with-d3/">visual git tutorials</a> are helpful to understand what the git commands are doing in the git commit tree.</li>
   <li><a href="http://www.sbf5.com/~cduan/technical/git/git-1.shtml"> Good
   explanation of the different terminology in git.</a></li>
   <li><a
